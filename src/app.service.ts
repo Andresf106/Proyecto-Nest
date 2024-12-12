@@ -2,7 +2,12 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World! putaaa';
+  getHello(): any {
+    const date = new Date(); 
+    return {
+      message: "hola mundo",
+      date: date.toLocaleDateString(),
+
+    }
   }
 }
